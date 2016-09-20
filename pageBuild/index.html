@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BB Map</title>
+  </head>
+  <body>
+    <img src='www/map.png' style='position:fixed;top:0px;left:0px;height:100%;z-index:-1;'>
+
+    <div id='vis' style='background:transparent;'></div>
+    <script src='js/d3.min.js'></script>
+    <script src='js/windCanvas.js'></script>
+
+
+
+
+
+    <canvas id="myCanvas" width="755" height="750"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      // begin custom shape
+      context.beginPath();
+      context.moveTo(280, 0);
+      context.lineTo(290,100);
+      context.lineTo(320,150);
+      context.lineTo(360,750);
+      context.lineTo(750, 750);
+      context.lineTo(750, 0);
+
+
+      // complete custom shape
+      context.closePath();
+      context.lineWidth = 2;
+      context.strokeStyle = 'black';
+      context.stroke();
+    </script>
+
+
+  </body>
+</html>
